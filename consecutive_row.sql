@@ -1,0 +1,1 @@
+Write a query to produce the start and end date

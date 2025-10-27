@@ -5,7 +5,7 @@ submit_date VARCHAR(20),
 stars integer
 )
 
-SELECT * FROM review_table;
+SELECT * FROM EMPLOYEE.dbo.review_table;
 
 INSERT INTO review_table (id, product_id, submit_date, stars) VALUES 
     (1, 'P1', '2024-01-05', 4),
@@ -22,7 +22,7 @@ INSERT INTO review_table (id, product_id, submit_date, stars) VALUES
 SELECT product_id, 
     MONTH(CAST(submit_date AS DATE)) as month, 
     ROUND(AVG(CAST(stars AS FLOAT)), 2) as avg_rating
-FROM review_table
+FROM EMPLOYEE.dbo.review_table
 GROUP BY 
     product_id, 
     MONTH(CAST(submit_date AS DATE))
@@ -40,7 +40,7 @@ SELECT product_id,
     AVG(CAST(stars AS FLOAT))
     OVER 
     (PARTITION BY product_id, MONTH(CAST(submit_date AS DATE))) as avg_rating
-FROM review_table
+FROM EMPLOYEE.dbo.review_table
 ORDER BY 
     product_id, 
     MONTH(CAST(submit_date AS DATE));

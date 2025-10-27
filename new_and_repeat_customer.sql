@@ -16,7 +16,7 @@ VALUES
 (6,'C1', '2025-01-03 09:30:00', 180.00),
 (7,'C2', '2025-01-03 15:50:00', 220.00);
 
-select * from Orders;
+select * from EMPLOYEE.dbo.Orders;
 
 -- Write SQL query to find the new and repeat customer for each order Date
     -- New customer is one who has placed order for the First TIME

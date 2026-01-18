@@ -154,7 +154,7 @@ HAVING COUNT(ep.project_id) > 1;
 SELECT * FROM EMPLOYEE.dbo.Projects;
 SELECT *
 FROM EMPLOYEE.dbo.Projects
-WHERE DATEADD(MONTH, 6, start_date) < end_date;
+WHERE DATEADD(MONTH, -6, start_date) < end_date;
 
 -- 5. 🧑‍💻 Find employees not assigned to any project
 SELECT e.first_name, e.last_name, e.salary

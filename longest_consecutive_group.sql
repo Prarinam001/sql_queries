@@ -40,7 +40,7 @@ SELECT *,
 CASE 
   -- checking previous rowq and compare with current row
   When LAG(result, 1) OVER (PARTITION BY Team ORDER BY Winning_Date) = 'L' AND result='W' then 1 -- checking previous rowq and compare with current row
-  When LaG(result, 1) OVER (PARTITION BY Team ORDER BY Winning_Date) is NULL AND result='W' then 1
+  When LAG(result, 1) OVER (PARTITION BY Team ORDER BY Winning_Date) is NULL AND result='W' then 1
   else 0
 END flag
 FROM Employee.dbo.cricket

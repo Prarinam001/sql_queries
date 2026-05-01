@@ -42,7 +42,4 @@ WITH
 SELECT Department, CEILING(AVG(Salary))
 FROM CTE2
 WHERE rn = middle or rn = next_to_middle
-GROUP BY Department
-
-
-
+GROUP BY Department;
